@@ -88,7 +88,6 @@ class Lexer:
 
     def tabulated_tokens(self):
         table = PrettyTable(["Linha", "Token", "Tipo", "Reservada"])
-        print(dir(self.tokens[0].source_pos))
         for token in self.tokens:
             # is_reserved = token.name != "NAME" and token.name.isalpha()  # Includes symbols too
             is_reserved = token.name != "NAME" and token.value.isalpha()  # Exclude Symbols

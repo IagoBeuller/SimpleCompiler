@@ -12,12 +12,12 @@ test.
 #!
 
 # Test Semantic Errors:
-
-#name-name2
-#int test2 = 10 / 0
+!#
+name-name2
+int test2 = 10 / 0
 str test3 = "Test different type assignment""
-#test3 = 10
-#test3 = test3 + 5   # test sum string with a number, error
+test3 = 10
+test3 = test3 + 5   # test sum string with a number, error
 test3 = 2 * test3  # test wrong duplication of string/list/tuple
 #!
 
