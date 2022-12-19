@@ -1,0 +1,3 @@
+# Lexer and Syntax Errors for develop a special treatment case.
+var not_closed_string = "Teste
+var test = 2022.2.5

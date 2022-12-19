@@ -1,0 +1,31 @@
+Sintax result:
+At line 11, column 4:
+10+
+   ^
+SyntaxError: invalid sintax.
+
+Semantic result:
+At line 12, column 1:
+name-name2
+^ name 'name' is not defined.
+SemanticError: invalid type on attribution.
+
+At line 13, column 18:
+int test2 = 10 / 0
+                 ^ cannot divide a number by zero.
+SemanticError: invalid type on attribution.
+
+At line 15, column 9:
+test3 = 10
+        ^ Cannot assign the value '10' of type 'int' to a variable of type 'str'.
+SemanticError: invalid type on attribution.
+
+At line 23, column 5:
+str test3 = "Teste"
+    ^ variable already declared.
+SemanticError: invalid type on attribution.
+
+At line 21, column 9:
+test3 = 2 * test3  # test wrong duplication of string/list/tuple
+        ^ TypeError: unsupported operand type(s) for *: 'int' and 'str'
+SemanticError: invalid type on attribution.

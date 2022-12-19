@@ -1,0 +1,151 @@
+Resultado do lexer:
+Erros: 0
+Tokens:
++-------+-------------------------------+-----------+-----------+
+| Linha |             Token             |    Tipo   | Reservada |
++-------+-------------------------------+-----------+-----------+
+|   1   |             print             |   PRINT   |    True   |
+|   1   |               (               |    LPAR   |   False   |
+|   1   |         "Hello World!"        |   STRING  |   False   |
+|   1   |               )               |    RPAR   |   False   |
+|   2   |              var              |  VARIABLE |    True   |
+|   2   |              test             |    NAME   |   False   |
+|   2   |               =               |     IS    |   False   |
+|   2   |              2022             |    INT    |   False   |
+|   3   |              int              |    INT    |    True   |
+|   3   |             test_2            |    NAME   |   False   |
+|   3   |               =               |     IS    |   False   |
+|   3   |               10              |    INT    |   False   |
+|   4   |             float             |   FLOAT   |    True   |
+|   4   |             test_3            |    NAME   |   False   |
+|   4   |               =               |     IS    |   False   |
+|   4   |              5.3              |   FLOAT   |   False   |
+|   5   |              str              |   STRING  |    True   |
+|   5   |             test_3            |    NAME   |   False   |
+|   5   |               =               |     IS    |   False   |
+|   5   |  "Compiladores - Uniube 2022" |   STRING  |   False   |
+|   7   |               if              |  IFSTATE  |    True   |
+|   7   |              test             |    NAME   |   False   |
+|   7   |               ==              |   EQUAL   |   False   |
+|   7   |              2022             |    INT    |   False   |
+|   7   |               :               |   SCOPE   |   False   |
+|   8   |             print             |   PRINT   |    True   |
+|   8   |               (               |    LPAR   |   False   |
+|   8   |           "Formando"          |   STRING  |   False   |
+|   8   |               )               |    RPAR   |   False   |
+|   9   |              elif             | ELIFSTATE |    True   |
+|   9   |              test             |    NAME   |   False   |
+|   9   |               ==              |   EQUAL   |   False   |
+|   9   |              2019             |    INT    |   False   |
+|   9   |               :               |   SCOPE   |   False   |
+|   10  |             print             |   PRINT   |    True   |
+|   10  |               (               |    LPAR   |   False   |
+|   10  |       "ComeÃ§ando Curso"      |   STRING  |   False   |
+|   10  |               )               |    RPAR   |   False   |
+|   11  |              elif             | ELIFSTATE |    True   |
+|   11  |              test             |    NAME   |   False   |
+|   11  |               <               |   LOWER   |   False   |
+|   11  |              2019             |    INT    |   False   |
+|   11  |               :               |   SCOPE   |   False   |
+|   12  |             print             |   PRINT   |    True   |
+|   12  |               (               |    LPAR   |   False   |
+|   12  |    "Vai Arrumar um curso!"    |   STRING  |   False   |
+|   12  |               )               |    RPAR   |   False   |
+|   13  |              elif             | ELIFSTATE |    True   |
+|   13  |              test             |    NAME   |   False   |
+|   13  |               >               |  GREATER  |   False   |
+|   13  |              2022             |    INT    |   False   |
+|   13  |               :               |   SCOPE   |   False   |
+|   14  |             print             |   PRINT   |    True   |
+|   14  |               (               |    LPAR   |   False   |
+|   14  | "Vai trabalhar na sua Ã¡rea!" |   STRING  |   False   |
+|   14  |               )               |    RPAR   |   False   |
+|   15  |              else             | ELSESTATE |    True   |
+|   15  |               :               |   SCOPE   |   False   |
+|   16  |             print             |   PRINT   |    True   |
+|   16  |               (               |    LPAR   |   False   |
+|   16  |    "NÃ£o desista do curso!"   |   STRING  |   False   |
+|   16  |               )               |    RPAR   |   False   |
++-------+-------------------------------+-----------+-----------+
+
+# Inclui também os símbolos
++-------+-------------------------------+-----------+-----------+
+| Linha |             Token             |    Tipo   | Reservada |
++-------+-------------------------------+-----------+-----------+
+|   1   |             print             |   PRINT   |    True   |
+|   1   |               (               |    LPAR   |    True   |
+|   1   |         "Hello World!"        |   STRING  |    True   |
+|   1   |               )               |    RPAR   |    True   |
+|   2   |              var              |  VARIABLE |    True   |
+|   2   |              test             |    NAME   |   False   |
+|   2   |               =               |     IS    |    True   |
+|   2   |              2022             |    INT    |    True   |
+|   3   |              int              |    INT    |    True   |
+|   3   |             test_2            |    NAME   |   False   |
+|   3   |               =               |     IS    |    True   |
+|   3   |               10              |    INT    |    True   |
+|   4   |             float             |   FLOAT   |    True   |
+|   4   |             test_3            |    NAME   |   False   |
+|   4   |               =               |     IS    |    True   |
+|   4   |              5.3              |   FLOAT   |    True   |
+|   5   |              str              |   STRING  |    True   |
+|   5   |             test_3            |    NAME   |   False   |
+|   5   |               =               |     IS    |    True   |
+|   5   |  "Compiladores - Uniube 2022" |   STRING  |    True   |
+|   7   |               if              |  IFSTATE  |    True   |
+|   7   |              test             |    NAME   |   False   |
+|   7   |               ==              |   EQUAL   |    True   |
+|   7   |              2022             |    INT    |    True   |
+|   7   |               :               |   SCOPE   |    True   |
+|   8   |             print             |   PRINT   |    True   |
+|   8   |               (               |    LPAR   |    True   |
+|   8   |           "Formando"          |   STRING  |    True   |
+|   8   |               )               |    RPAR   |    True   |
+|   9   |              elif             | ELIFSTATE |    True   |
+|   9   |              test             |    NAME   |   False   |
+|   9   |               ==              |   EQUAL   |    True   |
+|   9   |              2019             |    INT    |    True   |
+|   9   |               :               |   SCOPE   |    True   |
+|   10  |             print             |   PRINT   |    True   |
+|   10  |               (               |    LPAR   |    True   |
+|   10  |       "ComeÃ§ando Curso"      |   STRING  |    True   |
+|   10  |               )               |    RPAR   |    True   |
+|   11  |              elif             | ELIFSTATE |    True   |
+|   11  |              test             |    NAME   |   False   |
+|   11  |               <               |   LOWER   |    True   |
+|   11  |              2019             |    INT    |    True   |
+|   11  |               :               |   SCOPE   |    True   |
+|   12  |             print             |   PRINT   |    True   |
+|   12  |               (               |    LPAR   |    True   |
+|   12  |    "Vai Arrumar um curso!"    |   STRING  |    True   |
+|   12  |               )               |    RPAR   |    True   |
+|   13  |              elif             | ELIFSTATE |    True   |
+|   13  |              test             |    NAME   |   False   |
+|   13  |               >               |  GREATER  |    True   |
+|   13  |              2022             |    INT    |    True   |
+|   13  |               :               |   SCOPE   |    True   |
+|   14  |             print             |   PRINT   |    True   |
+|   14  |               (               |    LPAR   |    True   |
+|   14  | "Vai trabalhar na sua Ã¡rea!" |   STRING  |    True   |
+|   14  |               )               |    RPAR   |    True   |
+|   15  |              else             | ELSESTATE |    True   |
+|   15  |               :               |   SCOPE   |    True   |
+|   16  |             print             |   PRINT   |    True   |
+|   16  |               (               |    LPAR   |    True   |
+|   16  |    "NÃ£o desista do curso!"   |   STRING  |    True   |
+|   16  |               )               |    RPAR   |    True   |
++-------+-------------------------------+-----------+-----------+
+
+ [Token('NAME', 'print'), Token('LPAR', '('), Token('STRING', '"Hello World!"'), Token('RPAR', ')'), Token('VARIABLE', 'var'),
+ Token('NAME', 'test'), Token('IS', '='), Token('INT', '2022'), Token('INT', 'int'), Token('NAME', 'test_2'), Token('IS', '='),
+ Token('INT', '10'), Token('FLOAT', 'float'), Token('NAME', 'test_3'), Token('IS', '='), Token('FLOAT', '5.3'), Token('STRING', 'str'),
+ Token('NAME', 'test_3'), Token('IS', '='), Token('STRING', '"Compiladores - Uniube 2022"'), Token('IFSTATE', 'if'),
+ Token('NAME', 'test'), Token('IS', '='), Token('IS', '='), Token('INT', '2022'), Token('SCOPE', ':'), Token('NAME', 'print'),
+ Token('LPAR', '('), Token('STRING', '"Formando"'), Token('RPAR', ')'), Token('ELIFSTATE', 'elif'), Token('NAME', 'test'),
+ Token('IS', '='), Token('IS', '='), Token('INT', '2019'), Token('SCOPE', ':'), Token('NAME', 'print'), Token('LPAR', '('),
+ Token('STRING', '"ComeÃ§ando Curso"'), Token('RPAR', ')'), Token('ELIFSTATE', 'elif'), Token('NAME', 'test'), Token('LOWER', '<'),
+ Token('INT', '2019'), Token('SCOPE', ':'), Token('NAME', 'print'), Token('LPAR', '('), Token('STRING', '"Vai Arrumar um curso!"'),
+ Token('RPAR', ')'), Token('ELIFSTATE', 'elif'), Token('NAME', 'test'), Token('GREATER', '>'), Token('INT', '2022'),
+ Token('SCOPE', ':'), Token('NAME', 'print'), Token('LPAR', '('), Token('STRING', '"Vai trabalhar na sua Ã¡rea!"'),
+ Token('RPAR', ')'), Token('ELSESTATE', 'else'), Token('SCOPE', ':'), Token('NAME', 'print'), Token('LPAR', '('),
+ Token('STRING', '"NÃ£o desista do curso!"'), Token('RPAR', ')')]

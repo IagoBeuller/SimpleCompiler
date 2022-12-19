@@ -1,0 +1,40 @@
+!# [ To make multiline comment: ]
+   start tag: !#
+   end tag: #!
+#!
+# Test Syntax Errors:
+!#
+#10+
+var test = var
+5 = 10
+test.
+!int  # To comment this line needs a space between # and !, otherwise it will a multiline comment ending tag.
+#!
+
+# Test Semantic Errors:
+
+#name-name2
+#int test2 = 10 / 0
+str test3 = "Test different type assignment""
+#test3 = 10
+#test3 = test3 + 5   # test sum string with a number, error
+test3 = 2 * test3  # test wrong duplication of string/list/tuple
+#!
+
+# Test Semantic without errors, also show that math works properly:
+# Note: isolation like '(5 * 5)' not implemented yet, also for lists, tuples, function calls, if statements and "=+" "++".
+5 + 10 * 2 / + 2
+float test  = 10 + 5 / 2 * 3
+float test2 = 10.0 + 5.0 * 2 / 3
+str test3 = "Teste"
+test3 = test3 * 2  # Concatenates 2 copies of the original string
+float test4 = 10
+var test4 = 10 + 5  # 'var' can overwrite previous declarations
+test4 = "teste"     # variables declared using 'var' has dynamic type.
+int test_negative = -50
+
+test.name  # Not functional yet, but it's here just for show that 'test.' it's an error.
+
+# Function call not implemented yet
+#print("Hello World!")
+#test.jump()

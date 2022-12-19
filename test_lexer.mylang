@@ -1,0 +1,23 @@
+!# Multiline comment
+   Code beginning
+#!
+print("Hello World!")
+int test_2 = 10
+test_2 += 5
+float test_3 = 5.3
+str test_4 = "Compiladores - "Uniube" 2022"
+print(test_4.upper())
+
+if test == 2022:
+    print("Formando"
+elif test == 2019:
+    print("Começando Curso")
+elif test < 2019:
+    print("Vai Arrumar um curso!")
+elif test > 2022:
+    print("Vai trabalhar na sua área!")
+else:
+    print("Não desista do curso!")
+
+# Lexer Error example:
+#12´0
